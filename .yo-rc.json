@@ -10,7 +10,7 @@
     "baseName": "store",
     "buildTool": "gradle",
     "databaseType": "sql",
-    "devDatabaseType": "h2Disk",
+    "devDatabaseType": "postgresql",
     "enableHibernateCache": true,
     "enableSwaggerCodegen": false,
     "enableTranslation": false,

@@ -8,4 +8,4 @@ id;name;description;price;item_size;image;image_content_type;product_category_id
 7;Special Spring T-Shirt;T-Shirt with Spring logo;25;L;../fake-data/blob/shirt2.jpg;image/png;5
 8;Special Spring T-Shirt;T-Shirt with Spring logo;20;S;../fake-data/blob/shirt1.jpg;image/png;6
 9;Special Spring T-Shirt;T-Shirt with Spring logo;22;M;../fake-data/blob/shirt1.jpg;image/png;6
-10;Special Spring T-Shirt;T-Shirt with Spring logo;25;L;../fake-data/blob/shirt1.jpg;image/png;6
+10;Nouveau produit;T-Shirt with Spring logo;25;L;../fake-data/blob/shirt1.jpg;image/png;6

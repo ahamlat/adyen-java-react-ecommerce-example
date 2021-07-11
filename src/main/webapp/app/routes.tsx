@@ -18,6 +18,7 @@ import Cart from './modules/cart/cart';
 import Checkout from './modules/checkout/checkout';
 import CheckoutStatus from './modules/checkout/checkout-status';
 import Orders from './modules/orders/orders';
+import Counter from './modules/counter/counter';
 
 const Account = Loadable({
   loader: () => import(/* webpackChunkName: "account" */ 'app/modules/account'),
@@ -39,6 +40,7 @@ const Routes = () => (
       <ErrorBoundaryRoute path="/account/reset/request" component={PasswordResetInit} />
       <ErrorBoundaryRoute path="/account/reset/finish/:key?" component={PasswordResetFinish} />
       <PrivateRoute path="/admin" component={Admin} hasAnyAuthorities={[AUTHORITIES.ADMIN]} />
+      <PrivateRoute path="/counter" component={Counter} hasAnyAuthorities={[AUTHORITIES.ADMIN]} />
       <PrivateRoute path="/account" component={Account} hasAnyAuthorities={[AUTHORITIES.ADMIN, AUTHORITIES.USER]} />
       <ErrorBoundaryRoute path="/" exact component={Home} />
       <PrivateRoute path="/cart" exact component={Cart} hasAnyAuthorities={[AUTHORITIES.ADMIN, AUTHORITIES.USER]} />

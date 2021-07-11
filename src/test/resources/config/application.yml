@@ -21,7 +21,7 @@ spring:
     name: store
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:h2:mem:store;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    url: jdbc:posgresql://localhost:5432/store
     name:
     username:
     password:
@@ -32,7 +32,7 @@ spring:
     serialization:
       write-durations-as-timestamps: false
   jpa:
-    database-platform: tech.jhipster.domain.util.FixedH2Dialect
+    database-platform: tech.jhipster.domain.util.FixedPostgreSQL10Dialect
     open-in-view: false
     hibernate:
       ddl-auto: none

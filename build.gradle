@@ -140,8 +140,8 @@ project.ext.diffChangelogFile = "src/main/resources/config/liquibase/changelog/"
 liquibase {
     activities {
         main {
-            driver "org.h2.Driver"
-            url "jdbc:h2:file:./build/h2db/db/store"
+            driver "org.postgresql.Driver"
+            url "jdbc:posgresql://localhost:5432/store"
             username "store"
             password ""
             changeLogFile "src/main/resources/config/liquibase/master.xml"
@@ -150,12 +150,12 @@ liquibase {
             classpath "src/main/resources/"
         }
         diffLog {
-            driver "org.h2.Driver"
-            url "jdbc:h2:file:./build/h2db/db/store"
+            driver "org.postgresql.Driver"
+            url "jdbc:posgresql://localhost:5432/store"
             username "store"
             password ""
             changeLogFile project.ext.diffChangelogFile
-            referenceUrl "hibernate:spring:com.adyen.demo.store.domain?dialect=org.hibernate.dialect.H2Dialect&hibernate.physical_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy&hibernate.implicit_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy"
+            referenceUrl "hibernate:spring:com.adyen.demo.store.domain?dialect=org.hibernate.dialect.PostgreSQLDialect&hibernate.physical_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy&hibernate.implicit_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy"
             defaultSchemaName ""
             logLevel "debug"
             classpath "$buildDir/classes/java/main"
@@ -258,7 +258,7 @@ dependencies {
     implementation ("io.springfox:springfox-oas")
     implementation ("io.springfox:springfox-swagger2")
     implementation "io.springfox:springfox-bean-validators"
-    implementation "mysql:mysql-connector-java"
+    implementation "org.postgresql:postgresql"
     liquibaseRuntime "mysql:mysql-connector-java"
     implementation "org.mapstruct:mapstruct:${mapstructVersion}"
     annotationProcessor "org.mapstruct:mapstruct-processor:${mapstructVersion}"
@@ -270,8 +270,8 @@ dependencies {
     testImplementation "org.springframework.boot:spring-boot-test"
     testImplementation "com.tngtech.archunit:archunit-junit5-api:${archunitJunit5Version}"
     testRuntimeOnly "com.tngtech.archunit:archunit-junit5-engine:${archunitJunit5Version}"
-    testImplementation "com.h2database:h2"
-    liquibaseRuntime "com.h2database:h2"
+    testImplementation "org.postgresql:postgresql"
+    liquibaseRuntime "org.postgresql:postgresql"
     //jhipster-needle-gradle-dependency - JHipster will add additional dependencies here
 }
 

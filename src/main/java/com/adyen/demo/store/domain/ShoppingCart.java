@@ -118,7 +118,9 @@ public class ShoppingCart implements Serializable {
 
     public void calculateTotalPrice() {
         if (null != this.orders) {
-            this.setTotalPrice(this.orders.stream().map(ProductOrder::getTotalPrice).reduce(BigDecimal.ZERO, BigDecimal::add));
+            this.setTotalPrice(this.orders.stream()
+                                            .map(ProductOrder::getTotalPrice)
+                                            .reduce(BigDecimal.ZERO, BigDecimal::add));
         }
     }
 

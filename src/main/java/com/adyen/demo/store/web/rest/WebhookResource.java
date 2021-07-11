@@ -25,7 +25,7 @@ public class WebhookResource {
     private final Logger log = LoggerFactory.getLogger(WebhookResource.class);
 
     private final HMACValidator hmacValidator = new HMACValidator();
-    @Value("${ADYEN_HMAC_KEY}")
+    @Value("ADYEN_HMAC_KEY")
     private String hmacKey;
 
     private ShoppingCartService shoppingCartService;
