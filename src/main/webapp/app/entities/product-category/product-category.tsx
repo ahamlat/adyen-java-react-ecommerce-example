@@ -97,7 +97,9 @@ export const ProductCategory = (props: IProductCategoryProps) => {
                 <th className="hand" onClick={sort('description')}>
                   Description <FontAwesomeIcon icon="sort" />
                 </th>
-                <th />
+                <th className="hand" onClick={sort('description')}>
+                  Category <FontAwesomeIcon icon="sort" />
+                </th>
               </tr>
             </thead>
             <tbody>
@@ -108,9 +110,9 @@ export const ProductCategory = (props: IProductCategoryProps) => {
                       {productCategory.id}
                     </Button>
                   </td>
-                  <td>{productCategory.id}</td>
                   <td>{productCategory.name}</td>
                   <td>{productCategory.description}</td>
+                  <td>{productCategory.name}</td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`${match.url}/${productCategory.id}`} color="info" size="sm" data-cy="entityDetailsButton">

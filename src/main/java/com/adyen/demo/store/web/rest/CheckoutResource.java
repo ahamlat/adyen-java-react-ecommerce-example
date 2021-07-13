@@ -37,9 +37,9 @@ import com.adyen.service.exception.ApiException;
 public class CheckoutResource {
     private final Logger log = LoggerFactory.getLogger(CheckoutResource.class);
 
-    @Value("ADYEN_MERCHANT_ACCOUNT")
+    @Value("")
     private String merchantAccount;
-    @Value("ADYEN_CLIENT_KEY")
+    @Value("")
     private String clientKey;
 
     private final Checkout checkout;
@@ -47,7 +47,7 @@ public class CheckoutResource {
     private final ShoppingCartService shoppingCartService;
 
     public CheckoutResource(final ShoppingCartService shoppingCartService,
-                            @Value("ADYEN_API_KEY") String apiKey) {
+                            @Value("") String apiKey) {
         this.shoppingCartService = shoppingCartService;
         Client client = new Client(apiKey, Environment.TEST);
         this.checkout = new Checkout(client);

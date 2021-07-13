@@ -123,7 +123,7 @@ export const CustomerDetails = (props: ICustomerDetailsProps) => {
                       {customerDetails.id}
                     </Button>
                   </td>
-                  <td>{customerDetails.id}</td>
+                  
                   <td>{customerDetails.gender}</td>
                   <td>{customerDetails.phone}</td>
                   <td>{customerDetails.addressLine1}</td>

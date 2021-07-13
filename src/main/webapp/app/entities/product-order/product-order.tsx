@@ -57,7 +57,6 @@ export const ProductOrder = (props: IProductOrderProps) => {
                       {productOrder.id}
                     </Button>
                   </td>
-                  <td>{productOrder.id}</td>
                   <td>{productOrder.quantity}</td>
                   <td>{productOrder.totalPrice}</td>
                   <td>{productOrder.product ? <Link to={`product/${productOrder.product.id}`}>{productOrder.product.name}</Link> : ''}</td>

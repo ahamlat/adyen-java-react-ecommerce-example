@@ -37,10 +37,6 @@ public class Product implements Serializable {
     @Column(name = "price", precision = 21, scale = 2, nullable = false)
     private BigDecimal price;
 
-    @NotNull
-    @Enumerated(EnumType.STRING)
-    @Column(name = "item_size", nullable = false)
-    private Size itemSize;
 
     @Lob
     @Column(name = "image")
@@ -107,18 +103,6 @@ public class Product implements Serializable {
         this.price = price;
     }
 
-    public Size getItemSize() {
-        return this.itemSize;
-    }
-
-    public Product itemSize(Size itemSize) {
-        this.itemSize = itemSize;
-        return this;
-    }
-
-    public void setItemSize(Size itemSize) {
-        this.itemSize = itemSize;
-    }
 
     public byte[] getImage() {
         return this.image;
@@ -186,7 +170,6 @@ public class Product implements Serializable {
             ", name='" + getName() + "'" +
             ", description='" + getDescription() + "'" +
             ", price=" + getPrice() +
-            ", itemSize='" + getItemSize() + "'" +
             ", image='" + getImage() + "'" +
             ", imageContentType='" + getImageContentType() + "'" +
             "}";

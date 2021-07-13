@@ -58,9 +58,6 @@ public class ProductService {
                     if (product.getPrice() != null) {
                         existingProduct.setPrice(product.getPrice());
                     }
-                    if (product.getItemSize() != null) {
-                        existingProduct.setItemSize(product.getItemSize());
-                    }
                     if (product.getImage() != null) {
                         existingProduct.setImage(product.getImage());
                     }

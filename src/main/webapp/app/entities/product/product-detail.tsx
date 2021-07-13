@@ -39,10 +39,7 @@ export const ProductDetail = (props: IProductDetailProps) => {
             <span id="price">Price</span>
           </dt>
           <dd>{productEntity.price}</dd>
-          <dt>
-            <span id="itemSize">Item Size</span>
-          </dt>
-          <dd>{productEntity.itemSize}</dd>
+          
           <dt>
             <span id="image">Image</span>
           </dt>

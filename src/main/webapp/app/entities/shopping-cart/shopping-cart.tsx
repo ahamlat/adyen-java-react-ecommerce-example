@@ -65,7 +65,7 @@ export const ShoppingCart = (props: IShoppingCartProps) => {
                       {shoppingCart.id}
                     </Button>
                   </td>
-                  <td>{shoppingCart.id}</td>
+                  
                   <td>
                     {shoppingCart.placedDate ? <TextFormat type="date" value={shoppingCart.placedDate} format={APP_DATE_FORMAT} /> : null}
                   </td>

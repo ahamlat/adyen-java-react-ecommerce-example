@@ -48,11 +48,7 @@ export const Cart = (props: ICartProp) => {
                             </Button>
                             <small>Quantity: {order.quantity}</small>
                           </div>
-                          <div>
-                            <small>
-                              Size: <span>{order.product?.itemSize}</span>
-                            </small>
-                          </div>
+                          
                           <p>
                             <small>Item Cost: € {order.product?.price}</small>
                           </p>

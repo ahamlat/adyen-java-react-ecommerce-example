@@ -60,8 +60,8 @@ export const Home = (props: IHomeProp) => {
   return (
     <Row className="d-flex justify-content-center">
       <Col lg="9" md="12">
-        <h2>Welcome to Cuisine Kabyle Demo Store!</h2>
-        <p className="lead">This is an e-commerce application showcasing the Adyen Payment Platform</p>
+        <h2>Welcome to Kabyle Flavour Demo Store!</h2>
+        <p className="lead">This is an e-commerce application showcasing Kabyle Favours </p>
         {account && account.login ? (
           <>
             <div>
@@ -83,12 +83,6 @@ export const Home = (props: IHomeProp) => {
                     <button type="button" className="btn btn-light" onClick={sort('price')}>
                       <span className="d-flex">
                         <span>Price</span>&nbsp;
-                        <FontAwesomeIcon icon="sort" />
-                      </span>
-                    </button>
-                    <button type="button" className="btn btn-light" onClick={sort('size')}>
-                      <span className="d-flex">
-                        <span>Size</span>&nbsp;
                         <FontAwesomeIcon icon="sort" />
                       </span>
                     </button>
@@ -119,11 +113,6 @@ export const Home = (props: IHomeProp) => {
                           <div>
                             <small className="mb-1">{product.description}</small>{' '}
                           </div>
-                          <p>
-                            <small>
-                              Size: <span>{product.itemSize}</span>
-                            </small>
-                          </p>
                           <div className="d-flex w-100 justify-content-between">
                             <p className="mb-1">€ {product.price}</p>
                             <div>
