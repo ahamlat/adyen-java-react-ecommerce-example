@@ -60,7 +60,7 @@ export const Home = (props: IHomeProp) => {
   return (
     <Row className="d-flex justify-content-center">
       <Col lg="9" md="12">
-        <h2>Welcome to Adyen Demo Store!</h2>
+        <h2>Welcome to Cuisine Kabyle Demo Store!</h2>
         <p className="lead">This is an e-commerce application showcasing the Adyen Payment Platform</p>
         {account && account.login ? (
           <>
