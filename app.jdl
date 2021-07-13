@@ -1,7 +1,8 @@
-application {
+
+  application {
   config {
     baseName store
-    packageName com.adyen.demo.store
+    packageName com.cuisine.kabyle.demo.store
     authenticationType jwt
     prodDatabaseType mysql
     buildTool gradle
@@ -17,13 +18,9 @@ entity Product {
     name String required
     description String
     price BigDecimal required min(0)
-    itemSize Size required
     image ImageBlob
 }
 
-enum Size {
-    S, M, L, XL, XXL
-}
 
 entity ProductCategory {
     name String required
@@ -37,6 +34,14 @@ entity CustomerDetails {
     addressLine2 String
     city String required
     country String required
+}
+entity User {
+       firstName String
+       lastName String
+       login String
+       email String 
+       imageUrl String
+       authorities String 
 }
 
 enum Gender {

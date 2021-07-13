@@ -1,6 +1,6 @@
 package com.adyen.demo.store.domain;
 
-import com.adyen.demo.store.domain.enumeration.Size;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import io.swagger.annotations.ApiModel;
 import java.io.Serializable;
