@@ -61,7 +61,7 @@ export const Home = (props: IHomeProp) => {
     <Row className="d-flex justify-content-center">
       <Col lg="9" md="12">
         <h2>Welcome to Kabyle Flavour Demo Store!</h2>
-        <p className="lead">This is an e-commerce application showcasing Kabyle Favours </p>
+        <p className="lead">This is an e-commerce application showcasing Kabyle Flavours </p>
         {account && account.login ? (
           <>
             <div>
