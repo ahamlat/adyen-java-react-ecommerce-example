@@ -48,12 +48,11 @@ export const App = (props: IAppProps) => {
             <ErrorBoundary>
               <AppRoutes />
             </ErrorBoundary>
-          </Card>
-          
+          </Card>          
         </div>
-        <div>
-        <Footer />
-        </div>
+        <ErrorBoundary>       
+          <Footer />            
+        </ErrorBoundary>      
       </div>
     </Router>
   );

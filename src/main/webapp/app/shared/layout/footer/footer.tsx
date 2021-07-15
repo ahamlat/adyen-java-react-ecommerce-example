@@ -4,27 +4,27 @@ import React from 'react';
 import { Navbar} from 'reactstrap';
 
 
-
 const Footer = props => (  
-  <Navbar className="footer-navbar  text-white">
-        <div className="pt-3">       
-            <Copyright />
-        </div>
-        <div className="d-flex justify-content-end">
+    <>    
+     <Navbar className="footer-navbar">
+      <div className="pt-3">       
+        <Copyright />
+      </div>
+      <div className="d-flex justify-content-end">
         <div>        
-            <Contact />                
+         <Contact />                
+        </div>
+        <div>       
+         <About />        
         </div>
         <div >       
-            <About />        
-        </div>
-        <div >       
-            <Conditions />        
+         <Conditions />        
         </div>
         <div>        
-            <Help />                
+         <Help />                
         </div>
-        </div>
-  </Navbar>  
+      </div>
+     </Navbar>  
+    </>
 );
-
 export default Footer;
