@@ -4,7 +4,7 @@ import './conditions.scss';
 
  const Conditions =  props => {
      return (
-          <div className="col-12 container">
+          <div className="container-lg">
             <h3 className="text-info text-center mb-5 mt-4">GENERAL CONDITIONS OF USE - FRANCE</h3>
             <h4 className="text-info">KEY PRINCIPLES</h4>
             <ul>

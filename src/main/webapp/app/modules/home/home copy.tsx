@@ -1,6 +1,5 @@
 import './home.scss';
-import  '../../../content/images/photo-16.jpg';
-import  '../../../content/images/photo17.jpg';
+
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
@@ -14,8 +13,6 @@ import { addProduct } from 'app/entities/shopping-cart/shopping-cart.reducer';
 import { IProductProps } from 'app/entities/product/product';
 import { ITEMS_PER_PAGE } from 'app/shared/util/pagination.constants';
 import { IProduct } from 'app/shared/model/product.model';
-
-
 
 export interface IHomeProp extends IProductProps, StateProps, DispatchProps {}
 
@@ -63,8 +60,8 @@ export const Home = (props: IHomeProp) => {
   return (
     <Row className="d-flex justify-content-center">
       <Col lg="9" md="12">
-        <h2>Welcome to Kabyle Flavor Demo Store!</h2>
-        <p className="lead">This is an e-commerce application showcasing Kabyle Flavors </p>
+        <h2>Welcome to Kabyle Flavour Demo Store!</h2>
+        <p className="lead">This is an e-commerce application showcasing Kabyle Flavours </p>
         {account && account.login ? (
           <>
             <div>
@@ -161,35 +158,24 @@ export const Home = (props: IHomeProp) => {
           </>
         ) : (
           <div>
-            <img src="../../../content/images/photo-16.jpg" alt="image" className="img-fluid mb-5" />
-            
-            <Row>
-              <Col>
-              <img src="../../../content/images/photo17.jpg" alt="image" className="img-fluid mt-3" />
-              </Col>
-              <Col>
-                <h2 className=" mt-2 mb-4 text-muted">Discover the authentic Berber couscous,rich in flavors.</h2>
-                <p>Couscous, Chorba, bourek! travel to Kabylia thanks to delicious typical and traditional dishes prepared with care in our online <strong> restaurant Cuisine Kabyle.</strong></p>
-                <p>In short, Kabylia is a land bathed in sunshine, with pretty plains and fields of olive trees ... Small mud houses here and there on the hills covered by greenery, surrounded by mountains in the distance but also from the sea… Kabylia is beautiful, sweet and mysterious.</p>
-              </Col>
-            </Row>
-            <table className="table mt-4">
-              <th><h2 className=" text-center mt-2 mb-4 text-muted">Travel to the heart of Kabylia</h2></th>
-            </table>
-
-                <p className=" text-center text-black">Indeed, our entire menu is made up of homemade dishes, with the greatest respect for Berber traditions.
-                
-                </p>
-                <p className=" text-center text-black">Regarding our menu, we also offer many dishes without meat and mainly composed of vegetables.</p>
-                <p className=" text-center text-black">On this point, vegetarian and vegan friends rest assured.</p>
-                You do not have an account yet?&nbsp;
-              <Link to="/account/register" className="alert-link">
-                Register a new account
-              </Link>
+            <Alert color="warning">
+              If you want to
+              <span>&nbsp;</span>
               <Link to="/login" className="alert-link">
                 {' '}
                 sign in
               </Link>
+              , you can try the default accounts:
+              <br />- Administrator (login=&quot;admin&quot; and password=&quot;admin&quot;)
+              <br />- User (login=&quot;user&quot; and password=&quot;user&quot;).
+            </Alert>
+
+            <Alert color="warning">
+              You do not have an account yet?&nbsp;
+              <Link to="/account/register" className="alert-link">
+                Register a new account
+              </Link>
+            </Alert>
           </div>
         )}
       </Col>

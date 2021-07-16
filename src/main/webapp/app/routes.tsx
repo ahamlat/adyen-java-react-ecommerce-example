@@ -16,6 +16,7 @@ import PageNotFound from 'app/shared/error/page-not-found';
 import { AUTHORITIES } from 'app/config/constants';
 import Cart from './modules/cart/cart';
 import Conditions from './modules/conditions/conditions';
+import Help from './modules/help/help';
 import Contact from './modules/contact/contact';
 import Checkout from './modules/checkout/checkout';
 import CheckoutStatus from './modules/checkout/checkout-status';
@@ -50,6 +51,7 @@ const Routes = () => (
       <PrivateRoute path="/checkout" exact component={Checkout} hasAnyAuthorities={[AUTHORITIES.ADMIN, AUTHORITIES.USER]} />
       <PrivateRoute path="/checkout/status/:type" component={CheckoutStatus} hasAnyAuthorities={[AUTHORITIES.ADMIN, AUTHORITIES.USER]} />
       <ErrorBoundaryRoute path="/contact" exact component={Contact} />
+      <ErrorBoundaryRoute path="/help" exact component={Help} />
       <PrivateRoute path="/" component={Entities} hasAnyAuthorities={[AUTHORITIES.USER]} />
       <ErrorBoundaryRoute component={PageNotFound} />
 
